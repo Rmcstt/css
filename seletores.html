@@ -6,7 +6,28 @@
     <title>CSS Selectors</title>
     <link rel="stylesheet" href="css/tag.css">
     <style>
-        /* ... */
+        /*
+        *{} 🛑é um selector universal, ou seja, ele se aplica a todos os elementos da página.
+        .class{} 🛑é um selector de classe, ou seja, ele se aplica a todos os elementos que tenham a classe class.
+        #id{} 🛑é um selector de ID, ou seja, ele se aplica a todos os elementos que tenham o ID id.
+        p > ul{} 🛑é um selector de hierarquia, ou seja, ele se aplica a todos os elementos filhos de p que sejam ul.
+        p ~ ol{} 🛑é um seletor que pega o elemento que é filho porem nao está na mesma hierarquia de p.
+        [atributo]{} 🛑é um selector de atributo, ou seja, ele se aplica a todos os elementos que tenham o atributo atributo.
+        [atributo=valor]{} 🛑é um selector de atributo, ou seja, ele se aplica a todos os elementos que tenham o atributo atributo e o valor do atributo é valor.
+        [atributo~=valor]{} 🛑é um seletor que pega o elemento que tem o atributo atributo e o valor mesmo se conter espacos 
+        atributo*=lor{} 🛑 é um seletor que pega o elemento que tem o atributo atributo e o valor começando com lor.
+        span:nth-child(1){} 🛑é um seletor que pega o primeiro elemento filho de span.
+        section > :nth-child(odd){} 🛑é um seletor que pega todos os elementos filhos de section que sejam impar.
+        section > :nth-child(odd), ul, p{} 🛑é um seletor que pega todos os elementos filhos de section que sejam impar e que sejam ul ou p.
+        section > :nth-child(even){} 🛑é um seletor que pega todos os elementos filhos de section que sejam par.
+        section > span:nth-of-type(2) {} 🛑é um seletor que pega o segundo elemento filho de section que seja span.
+        */
+        
+        
+        section > span:nth-of-type(2) {
+            color: #ff0;
+            background-color: #f77;
+        }
     </style>
 </head>
 
@@ -29,7 +50,7 @@
             </ol>
             <div id='aninhado' class='tag'>
                 <div class="tag">
-                    <section class='tag'>
+                    <section class='tag nolabel'>
                         <span class='tag'>1</span>
                         <p class='tag'>2</p>
                         <span class='tag'>3</span>
